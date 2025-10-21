@@ -24,8 +24,8 @@ export function createClient() {
   );
 }
 
-export function isAdmin(email?: string | null) {
+export async function isAdmin(email?: string | null) {
   if (!email) return false;
-  const list = (process.env.ADMIN_EMAILS || "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean);
+  const list = (process.env.ADMIN_EMAILS || "").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
   return list.includes(email.toLowerCase());
 }
