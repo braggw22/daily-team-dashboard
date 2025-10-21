@@ -1,0 +1,13 @@
+<svg width="160" height="28" viewBox="0 0 160 28" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b3b6e"/>
+      <stop offset="1" stop-color="#1581a6"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#g)">
+    <rect x="0" y="6" width="24" height="16" rx="4"/>
+    <circle cx="12" cy="14" r="5" fill="#fff"/>
+    <text x="32" y="20" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#ffffff">BOWHEAD</text>
+  </g>
+</svg>
