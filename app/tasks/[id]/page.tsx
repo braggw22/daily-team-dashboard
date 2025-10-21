@@ -3,7 +3,7 @@ import { format } from "date-fns";
 
 async function updateTask(formData: FormData) {
   "use server";
-  const supabase = createClient();
+  const supabase = await createClient();
   const id = formData.get("id") as string;
   const patch = {
     title: String(formData.get("title") || ""),
@@ -21,7 +21,7 @@ async function updateTask(formData: FormData) {
 }
 
 export default async function TaskDetail({ params }: { params: { id: string } }) {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: task } = await supabase.from("tasks_view").select("*").eq("id", params.id).single();
   if (!task) return <div>Task not found</div>;
   const { data: deliverables } = await supabase.from("deliverables").select("*").order("code");
