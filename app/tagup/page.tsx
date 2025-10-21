@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 
 async function submit(formData: FormData) {
   "use server";
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { error: "Not signed in" };
 
@@ -20,7 +20,7 @@ async function submit(formData: FormData) {
 }
 
 export default async function TagUpPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   const today = new Date().toISOString().slice(0,10);
   const email = user?.email;
