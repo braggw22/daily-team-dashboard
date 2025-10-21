@@ -2,7 +2,7 @@ import { createClient } from "@/lib/supabase";
 import Link from "next/link";
 
 export default async function TasksPage({ searchParams }: { searchParams?: Record<string,string|undefined> }) {
-  const supabase = createClient();
+  const supabase = await createClient();
   const dcode = searchParams?.deliverable_code || "";
   const building = searchParams?.building || "";
   const owner = searchParams?.owner || "";
