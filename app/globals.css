@@ -1,0 +1,34 @@
+:root{
+  --bowhead-blue:#0b3b6e;
+  --bowhead-cyan:#1581a6;
+  --ink:#0b1b2b;
+  --border:#e5e7eb;
+  --bg:#f9fafb;
+  --card:#ffffff;
+}
+body{ background:var(--bg); color:var(--ink); }
+nav{ background:linear-gradient(90deg,var(--bowhead-blue),var(--bowhead-cyan)); color:#fff; }
+nav a{ color:#fff !important; opacity:0.95; }
+nav b{ color:#fff; }
+.card{ background:var(--card); border-color:var(--border); }
+button, .btn{ background:var(--bowhead-blue); color:#fff; border:none; border-radius:8px; padding:8px 12px; cursor:pointer;}
+button:hover, .btn:hover{ filter:brightness(1.05); }
+input, textarea, select{ border:1px solid var(--border); border-radius:8px; width:100%; }
+h1,h2,h3{ color:var(--bowhead-blue); }
+* { box-sizing: border-box; }
+table { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px 10px; border-bottom: 1px solid #eee; text-align: left; }
+input, textarea, select, button { padding: 8px 10px; font-size: 14px; }
+.badge { padding: 2px 8px; border-radius: 999px; font-size: 12px; border: 1px solid #ddd; }
+.status-Not\ Started { background: #fafafa; }
+.status-In\ Progress { background: #fff7e6; }
+.status-Review { background: #e6f2ff; }
+.status-Done { background: #eaffea; }
+.card { border: 1px solid #eee; border-radius: 10px; padding: 12px; }
+.grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); }
+.progress {
+  width: 100%; background: #f1f1f1; height: 10px; border-radius: 6px; overflow: hidden;
+}
+.progress > div { height: 100%; }
+.critical { border-color: #ffb3b3; box-shadow: 0 0 0 2px #ffe6e6 inset; }
+.kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace; background:#f5f5f5; border:1px solid #eee; border-radius:6px; padding:2px 6px; }
