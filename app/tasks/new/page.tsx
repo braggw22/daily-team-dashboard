@@ -2,7 +2,7 @@ import { createClient } from "@/lib/supabase";
 
 async function createTask(formData: FormData) {
   "use server";
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { error: "Not signed in" };
   const payload = {
@@ -22,7 +22,7 @@ async function createTask(formData: FormData) {
 }
 
 export default async function NewTaskPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
   const { data: deliverables } = await supabase.from("deliverables").select("*").order("code");
 
   async function action(data: FormData) {
